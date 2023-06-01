@@ -1,0 +1,51 @@
+.navbar {
+    background-color: white;
+    display: flex;
+    padding-top: 3rem;
+    margin-left: 10rem;
+    align-items: center;
+}
+
+.navbar-title {
+    /* Additional styles for title if needed */
+    font-size: 25px;
+    font-weight: 900;
+    
+}
+
+.navbar-title-logo{
+    /* Additional styles for logo if needed */
+    width: 30px;
+    height: 30px;
+    transform: translateY(5px);
+}
+
+.navbar-fields {
+    display: flex;
+    gap: 3rem;
+    margin-left: 15rem;
+    font-size: 17px;
+}
+
+.navbar-item {
+    padding: 10px 20px; /* adjust as needed for your layout */
+    border-radius: 20px; /* creates the pill shape */
+    transition: background-color 0.2s ease; /* animates the hover effect */
+}
+
+.navbar-item-contact {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 2px solid #2caa63;
+}
+
+.navbar-item-contact:hover {
+    background-color: #2caa63;
+    opacity: 90%;
+}
+
+
+.navbar-item:hover{
+    background-color: #2caa63; 
+    opacity: 90%;
+}
