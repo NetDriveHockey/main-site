@@ -17,9 +17,9 @@ export default function Navbar() {
                     <a className="navbar-fields-normal-a" href="camps">Camps</a>
                     {isOpenCamps && (
                         <div className="dropdown-menu-camps"> 
-                            <a href="/camps/camp1">Rep Prep Chilliwack</a>
-                            <a href="/camps/camp2">Female Prep</a>
-                            <a href="/camps/camp3">Scott Jones</a>
+                            <a href="/camps/rep-prep">Rep Prep Chilliwack</a>
+                            <a href="/camps/female-prep">Female Prep</a>
+                            <a href="/camps/scott-jones">Scott Jones</a>
                         </div>
                     )}
                 </div>
