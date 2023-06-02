@@ -24,6 +24,11 @@
     gap: 10px; /* adjust as needed */
 }
 
+.footer-links a{
+    text-decoration: none;
+    color: white;
+}
+
 .footer-link-item {
     padding: 15px; /* adjust as needed */
 }

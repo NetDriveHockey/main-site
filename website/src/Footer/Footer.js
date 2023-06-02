@@ -9,12 +9,12 @@ export default function Footer() {
         <div className="footer">
             <div className="footer-content">
                 <div className="footer-links" >
-                    <div className="footer-link-item">Home</div>
-                    <div className="footer-link-item">Instructors</div>
-                    <div className="footer-link-item">Camps</div>
-                    <div className="footer-link-item">Tournaments</div>
-                    <div className="footer-link-item">Alumni</div>
-                    <div className="footer-link-item">Contact</div>
+                    <div className="footer-link-item"><a href="/">Home</a></div>
+                    <div className="footer-link-item"><a href="/">Instructors</a></div>
+                    <div className="footer-link-item"><a href="/">Camps</a></div>
+                    <div className="footer-link-item"><a href="/">Tournaments</a></div>
+                    <div className="footer-link-item"><a href="/">Alumni</a></div>
+                    <div className="footer-link-item"><a href="/">Contact</a></div>
                 </div>
             
                 <p>© 2023 NetDriveHockey</p>

@@ -8,13 +8,11 @@
 }
 
 .navbar-title {
-    /* Additional styles for title if needed */
     font-size: 25px;
     font-weight: 900;
 }
 
 .navbar-title-logo{
-    /* Additional styles for logo if needed */
     width: 30px;
     height: 30px;
     transform: translateY(5px);
@@ -28,26 +26,117 @@
     margin-left: 9.5rem;
 }
 
+.navbar-fields-normal-a{
+    text-decoration: none;
+    color: black;
+}
+
 .navbar-item {
-    padding: 10px 20px; /* adjust as needed for your layout */
-    border-radius: 20px; /* creates the pill shape */
-    transition: background-color 0.2s ease; /* animates the hover effect */
-    
+    padding: 10px 20px; 
+    border-radius: 20px; 
+    transition: background-color 0.2s ease; 
 }
 
 .navbar-item-contact {
     padding: 10px 20px;
     border-radius: 20px;
     border: 2px solid #2caa63;
+    color: #2caa63;
+}
+
+.navbar-item-contact {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 2px solid #2caa63;
+    color: black;
+}
+
+.navbar-fields-contact-a{
+    text-decoration: none;
+    color: #2caa63;
+}
+
+.navbar-fields-contact-a:hover{
+    text-decoration: none;
+    color: black;
 }
 
 .navbar-item-contact:hover {
     background-color: #2caa63;
+    color: black;
     opacity: 90%;
+}
+
+.navbar-item-contact:hover .navbar-fields-contact-a {
+    color: black;
 }
 
 
 .navbar-item:hover{
     background-color: #2caa63; 
     opacity: 90%;
+}
+
+.dropdown-menu-camps {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    background-color: white;
+    border-radius: 10px;
+    min-width: 320px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    margin-top: 0.9rem;
+    align-items: center;
+    left: calc(50% - 40px); /* 40px is half the width of the parent element */
+    transform: translateX(-50%);
+}
+
+.dropdown-menu-tournaments {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    background-color: white;
+    border-radius: 10px;
+    min-width: 320px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    margin-top: 0.9rem;
+    align-items: center;
+    left: calc(50%); /* 40px is half the width of the parent element */
+    transform: translateX(-20%);
+}
+
+
+.dropdown-menu-camps a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: 2px solid white;
+}
+
+.dropdown-menu-tournaments a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    border: 2px solid white;
+}
+
+.dropdown-menu-camps a:hover {
+    border: 2px solid #2caa63;
+    color:#2caa63;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.dropdown-menu-tournaments a:hover {
+    border: 2px solid #2caa63;
+    color:#2caa63;
+    padding: 10px 20px;
+    border-radius: 20px;
 }
