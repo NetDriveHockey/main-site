@@ -1,0 +1,31 @@
+.home {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    margin: auto;
+    width: 52.5rem;
+    height: 37rem;;
+    margin-top: 1rem;
+}
+
+.carousel .slide {
+    background: transparent;
+}
+
+.carousel.carousel-slider .control-arrow:before {
+    border: 8px solid white;
+}
+
+.carousel .control-next.control-arrow:before {
+    border-left: 8px solid white;
+    height: 20px;
+}
+
+.carousel .control-prev.control-arrow:before {
+    border-right: 8px solid white;
+    height: 20px;
+}
+
+.carousel .thumbs-wrapper {
+    display: none;
+}

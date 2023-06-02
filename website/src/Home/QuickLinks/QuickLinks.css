@@ -1,0 +1,59 @@
+.quicklinks-line{
+    width: 80%;
+    margin-top: 4.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #2caa63;
+    height: 0.05rem;
+    border: none;
+}
+
+.quicklinks-header{
+    font-size: 1.95rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;  
+}
+
+.links-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.link-card {
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative; /* Added this */
+    height: 100%; /* Added this */
+    display: flex; /* Added this */
+    flex-direction: column; /* Added this */
+    border: 2px solid #2caa63;
+}
+
+.link-card-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.link-card-img{
+    height: 250px;
+}
+
+.link-card-button{
+    background-color: #2caa63;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.link-card-button a{
+    color: white;
+    text-decoration: none;
+}
