@@ -14,7 +14,7 @@ export default function Navbar() {
                 <div className='navbar-item'> <a className="navbar-fields-normal-a" href="/">Home</a></div>
                 <div className='navbar-item'><a className="navbar-fields-normal-a" href="instructors">Instructors</a></div>
                 <div className='navbar-item' onMouseEnter={() => setIsOpenCamps(true)} onMouseLeave={() => setIsOpenCamps(false)}> 
-                    <a className="navbar-fields-normal-a" href="camps">Camps</a>
+                    <a className="navbar-fields-normal-a" href="/camps">Camps</a>
                     {isOpenCamps && (
                         <div className="dropdown-menu-camps"> 
                             <a href="/camps/rep-prep">Rep Prep Chilliwack</a>
@@ -24,7 +24,7 @@ export default function Navbar() {
                     )}
                 </div>
                 <div className='navbar-item' onMouseEnter={() => setIsOpenTournaments(true)} onMouseLeave={() => setIsOpenTournaments(false)}> 
-                    <a className="navbar-fields-normal-a" href="tournaments">Tournaments</a>
+                    <a className="navbar-fields-normal-a" href="/tournaments">Tournaments</a>
                     {isOpenTournaments && (
                         <div className="dropdown-menu-tournaments"> 
                             <a href="/tournaments/kick-off">Spring Kick Off Chilliwack</a>

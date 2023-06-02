@@ -7,6 +7,10 @@ import FemalePrep from './Camps/FemalePrep/FemalePrep';
 import Camps from './Camps/Camps';
 import RepPrep from './Camps/RepPrep/RepPrep';
 import ScottJones from './Camps/ScottJones/ScottJones';
+import Tournaments from './Tournaments/Tournaments';
+import SpringKickOff from './Tournaments/SpringKickOff/SpringKickOff';
+import Alumni from './Alumni/Alumni';
+import Contact from './Contact/Contact';
 
 const App = () => {
   return (
@@ -22,6 +26,15 @@ const App = () => {
             <Route path="rep-prep" element={<RepPrep />} />
             <Route path="scott-jones" element={<ScottJones />} />
           </Route>
+
+          <Route path="/tournaments">
+            <Route index element={<Tournaments />  } />
+            <Route path="kick-off" element={<SpringKickOff />} />
+          </Route>
+
+          <Route path="/alumni" element={<Alumni />} />
+
+          <Route path="/contact" element={<Contact />} />
         </Route>
       </Routes>
     </Router>

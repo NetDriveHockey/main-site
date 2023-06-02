@@ -1,0 +1,90 @@
+.camps-line{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #2caa63;
+    height: 0.05rem;
+    border: none;
+    margin-bottom: 0rem;
+}
+
+.camps-header{
+    font-size: 1.95rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;  
+}
+
+.camps-subheader{
+    font-size: 1.25rem;
+    font-weight: 100;
+    font-style: italic;
+    text-align: center;
+}
+
+.camps-offer-header {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.camps-card-container {
+    display: flex;
+    justify-content: space-around;
+    border-radius: 15px;
+    padding: 4rem 1rem;
+    border: 1px solid #2caa63;
+    width: 78%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+}
+
+.camps-card {
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 1rem;
+    width: 30%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.camps-card-title {
+    font-size: 1.35rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+
+.camps-card-image {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.camps-card-description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.camps-card-link {
+    color: #2caa63;
+    text-decoration: none;
+    border: 1px solid #2caa63;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.camps-card-link:hover {
+    background-color: #2caa63;
+    color: #fff;
+}
