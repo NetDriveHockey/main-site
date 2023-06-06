@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "nhl-site",
+  "private_key_id": "ef658ba17e30535e49775f16406e871817d0acf2",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC0K1DeDQtgISmy\nS/JSy7DmtFZnXwUmLUWg2tTGoeikf2xf5EpnsLlkh5mCjCzBqK92Fq3GrX2SoYgQ\nsxf3R+AaXet8mjakCEjwGKI4XeaD5JbNnaFZITOYfShaT8DWQXI7dYFhPsThmgp/\nropcfORMI3LMJrcqa6fRDm/ZIEd4oYRkXrkoEX7DCKS8JM5AbPm4f3uRjvdxDKAv\n8d2PSd9UN385/i0OAf9sjAYTSTzYwXz5cj/g3q4aHP98/SPTpH3WdN77WHYZ9nvW\nIXDZmvt6ilPUbuuoFKifUvVG0qYDHBKk+rTgRt5QwEc6c2FasZ5br/4ZfoJlVy6h\no1LIC7HtAgMBAAECggEAAuNQ3AZUgNl3PCLogvg94SzR171XrUl7fL0VPQvaWUyr\nlYvov2m/RwO/a67IhuAn09pANdeRFDkfn7jnMPEHgBSyUiB8sLtrQ+H5M7MZn1Ka\nMjiNHgsgsxiKfYwauLR62sYi6UaizET2Vx6anCnqVOgajnguZnEsUvcKxu20B5R0\nPz1iOPSsdpa51+z9td/yGRItKU5cqew26hVb+3b7rIrGEllRWEJh39szp+0QDuF7\nKkRv/v9dAkS5bA+wKnVj7KUpgBkQ/J8XFaMGenQBnr4vkgJ3d0iAgC4vL0YbyA2G\nUe8mbL/RNkoRrZP1cO3Xwdqrgw3iFFj53ZK337KqlwKBgQD5LrsFQtX0uPGXheXQ\nF2+oFVi1yHVCLxOedkDtUFrU4CeI5WPXRnpXzrYLIax/XXaGS0I+gR5PPFXcrEbu\nHqRZxJ5kzIQEHt0V1HiH2ITZcNXvTVpqrcAbMH1h2ymTS8w7pmv/utglZLhPhB5e\nIgndsLS9bX3eU6dvWf778ehUSwKBgQC5GTeiRExfsdOv1x/EUMucsNpwnnLJDKIr\ncjjnRaTNZupn3Jxb+Y226T2MCDjzmGeWHgSQUOuf5n54CdS869FhWZWejT6syX0k\nCDZ30Fn71tHs05dAVpN6YWLUQNIfOhnFViwq/x0YLiAZ6lPKGj8KdYIranl681VI\n9GZ0ONL/pwKBgQDOzbjLkf+uHjvrjGYBwSGa9zRrkhW3OwjmT7BtBG6OFAbbt72X\n8dchvt4Y+PaHshLnO9ibtV9pVWLRRW2MvIOcOPFYKOA75z2Hm5H49Hq1V89FzwYG\nWXOBXUoCB/lGVPcIXoNtdy1iQ2gwHi9x4oAbrEckm5WGChmA8ckMYmV2ZwKBgQCL\nWwX8wAj0HxDuGTuMdPvm22uKUHDBFybdKODYliFul2YxjfGWeXsNU+sHi4U9OOf8\nKFttP882ErXysAwftDduYKD5vwOJ2STDRP+lExM8PM7Ny7vbL5NXFwzuGmNYKUkP\nvkIAmRORieCXQkmVJk+CE1hOUZpmS99Qzth39fQ9jwKBgQC9US0VJUrl+6sE4GHN\n5Qk8H2qG6Y5C0/Ay94hpOZOogEDR2dUtz/2m6wPFvbbtGpAnoRvUjGaWoFmGXnSB\nAtVgndvlfbKv4LZ115dz+FeIDYpLTx6hABN2kQzp+7jPkDwe15bDh9/7Ur0sJ3tL\nOKX1w4sjWfQ7inIlf0KBEex2Tg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "netdrive-gogglesheets@nhl-site.iam.gserviceaccount.com",
+  "client_id": "111965959949571739969",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/netdrive-gogglesheets%40nhl-site.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

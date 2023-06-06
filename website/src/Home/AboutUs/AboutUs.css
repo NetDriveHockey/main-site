@@ -13,10 +13,10 @@
     padding: 20px;
     box-shadow: 0px 8px 16px 0px rgba(44,170,99,0.25);
     border-radius: 10px;
-    position: relative; /* Added this */
-    height: 100%; /* Added this */
-    display: flex; /* Added this */
-    flex-direction: column; /* Added this */
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .card h2 {
@@ -27,7 +27,7 @@
 .card p {
     font-size: 16px;
     margin-bottom: 20px;
-    flex-grow: 1; /* Added this */
+    flex-grow: 1;
 }
 
 .card footer {

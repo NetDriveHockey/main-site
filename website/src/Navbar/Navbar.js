@@ -12,7 +12,7 @@ export default function Navbar() {
             <div className="navbar-title"><img className="navbar-title-logo" src={logo} alt="NetDriveHockey Logo"></img>NetDriveHockey</div>
             <div className="navbar-fields">
                 <div className='navbar-item'> <a className="navbar-fields-normal-a" href="/">Home</a></div>
-                <div className='navbar-item'><a className="navbar-fields-normal-a" href="instructors">Instructors</a></div>
+                <div className='navbar-item'><a className="navbar-fields-normal-a" href="/instructors">Instructors</a></div>
                 <div className='navbar-item' onMouseEnter={() => setIsOpenCamps(true)} onMouseLeave={() => setIsOpenCamps(false)}> 
                     <a className="navbar-fields-normal-a" href="/camps">Camps</a>
                     {isOpenCamps && (
@@ -31,8 +31,8 @@ export default function Navbar() {
                         </div>
                     )}
                 </div>
-                <div className='navbar-item'><a className="navbar-fields-normal-a" href="alumni">Alumni</a></div>
-                <div className='navbar-item-contact'><a className="navbar-fields-contact-a" href="contact">Contact</a></div>
+                <div className='navbar-item'><a className="navbar-fields-normal-a" href="/alumni">Alumni</a></div>
+                <div className='navbar-item-contact'><a className="navbar-fields-contact-a" href="/contact">Contact</a></div>
             </div>
         </div>
     );

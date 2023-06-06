@@ -25,10 +25,10 @@
     width: 300px;
     padding: 20px;
     border-radius: 10px;
-    position: relative; /* Added this */
-    height: 100%; /* Added this */
-    display: flex; /* Added this */
-    flex-direction: column; /* Added this */
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     border: 2px solid #2caa63;
 }
 
