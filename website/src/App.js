@@ -7,8 +7,7 @@ import FemalePrep from './Camps/FemalePrep/FemalePrep';
 import Camps from './Camps/Camps';
 import RepPrep from './Camps/RepPrep/RepPrep';
 import ScottJones from './Camps/ScottJones/ScottJones';
-import Tournaments from './Tournaments/Tournaments';
-import SpringKickOff from './Tournaments/SpringKickOff/SpringKickOff';
+import SpringKickOff from './SpringKickOff/SpringKickOff';
 import Alumni from './Alumni/Alumni';
 import Contact from './Contact/Contact';
 
@@ -27,10 +26,7 @@ const App = () => {
             <Route path="scott-jones" element={<ScottJones />} />
           </Route>
 
-          <Route path="/tournaments">
-            <Route index element={<Tournaments />  } />
-            <Route path="kick-off" element={<SpringKickOff />} />
-          </Route>
+          <Route path="/spring-kick-off" element={<SpringKickOff />} />
 
           <Route path="/alumni" element={<Alumni />} />
 

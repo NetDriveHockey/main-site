@@ -4,7 +4,7 @@ const { google } = require("googleapis");
 
 
 const app = express();
-app.use(express.json()); // Middleware for parsing JSON
+app.use(express.json());
 app.use(cors());
 
 app.post('/submit-form', async (req, res) => {
@@ -16,15 +16,14 @@ app.post('/submit-form', async (req, res) => {
     const client = await auth.getClient();
     const googleSheets = google.sheets({ version: 'v4', auth: client });
 
-    // Extract form data and sheet name from request body
+    
     const { data, sheetName } = req.body;
 
     const ageGroupToSheetName = {
-        'U11': 'U11Registration',
-        'U13': 'U13Registration',
-        'U15': 'U15Registration',
-        'U18': 'U18Registration',
-        // add other mappings as necessary
+        'U11': 'U11RepPrep',
+        'U13': 'U13RepPrep',
+        'U15': 'U15RepPrep',
+        'U18': 'U18RepPrep',
     };
 
     const newSheetName = ageGroupToSheetName[sheetName];
@@ -35,7 +34,7 @@ app.post('/submit-form', async (req, res) => {
         range: `${newSheetName}!A:A`,
         valueInputOption: 'USER_ENTERED',
         resource: {
-            values: [Object.values(data)], // assumes that data is an object where each property is a field in the form
+            values: [Object.values(data)],
         },
     });
 

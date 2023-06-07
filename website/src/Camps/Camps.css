@@ -17,7 +17,7 @@
 }
 
 .camps-subheader{
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-weight: 100;
     font-style: italic;
     text-align: center;
@@ -53,6 +53,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    background-color: #f9f9f9;
 }
 
 .camps-card-title {
@@ -87,4 +88,12 @@
 .camps-card-link:hover {
     background-color: #2caa63;
     color: #fff;
+}
+
+.sko-vertical-line {
+    width: 0.05rem;
+    height: 100%;
+    background-color: #2caa63;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }

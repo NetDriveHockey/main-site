@@ -5,7 +5,6 @@ import logo from './NetDriveLogo.jpeg';
 
 export default function Navbar() {
     const [isOpenCamps, setIsOpenCamps] = useState(false);
-    const [isOpenTournaments, setIsOpenTournaments] = useState(false);
 
     return (
         <div className="navbar">
@@ -23,14 +22,7 @@ export default function Navbar() {
                         </div>
                     )}
                 </div>
-                <div className='navbar-item' onMouseEnter={() => setIsOpenTournaments(true)} onMouseLeave={() => setIsOpenTournaments(false)}> 
-                    <a className="navbar-fields-normal-a" href="/tournaments">Tournaments</a>
-                    {isOpenTournaments && (
-                        <div className="dropdown-menu-tournaments"> 
-                            <a href="/tournaments/kick-off">Spring Kick Off Chilliwack</a>
-                        </div>
-                    )}
-                </div>
+                <div className='navbar-item'><a className="navbar-fields-normal-a" href="/spring-kick-off">Spring Kick Off</a></div> 
                 <div className='navbar-item'><a className="navbar-fields-normal-a" href="/alumni">Alumni</a></div>
                 <div className='navbar-item-contact'><a className="navbar-fields-contact-a" href="/contact">Contact</a></div>
             </div>
