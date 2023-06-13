@@ -22,7 +22,7 @@ export default function RepPrep() {
                 <hr className="rep-prep-line"></hr>
                 <h1 className="rep-prep-date">August 21st-25th  -  Chilliwack Colliseum</h1>
                 <h6 className="rep-prep-subheader">NetDriveHockey will again offer our very popular end of summer hockey skills sessions in Chilliwack. The Chilliwack camps dates will be the week before CMHA try-outs. These camps have been very successful over the past 10 seasons. Each session includes 45 minutes of skills, followed by 45 min game. Total ice time 7.5 hours. This camp will get the kids prepared for rep tryouts. There will be a goalie specific coach working with the goaltenders for 2 days during the week.</h6>
-                <div className="image-container">
+                <div className="image-container-rep-prep">
                     <img src={RepPrepImg} alt="rep-prep" className="rep-prep-image"></img>
                 </div>
                 <div className="registration-container">

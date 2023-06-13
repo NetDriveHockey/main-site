@@ -65,7 +65,6 @@ function MobileNavbar() {
 }
 
 
-
 function DesktopNavbar() {
     const [isOpenCamps, setIsOpenCamps] = useState(false);
 
