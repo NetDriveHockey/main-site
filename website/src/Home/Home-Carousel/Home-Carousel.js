@@ -23,43 +23,43 @@ export default function HomeCarousel() {
     return (
         <div className="home">
             <Carousel autoPlay infiniteLoop showArrows={true}>
-                <div>
+                <div className="image-container">
                     <img src={img1} alt="Pic 1" />
                 </div>
-                <div>
+                <div className="image-container">
                     <img src={img2} alt="Pic 2" />
                 </div>
-                <div>
+                <div className="image-container">
                     <img src={img3} alt="Pic 3" />
                 </div>
-                <div>
+                <div className="image-container">
                     <img src={img4} alt="Pic 4" />
                 </div>
-                <div>
+                <div className="image-container">
                     <img src={img5} alt="Pic 5" />
                 </div>
-                <div>
+                <div className="image-container">
                     <img src={img6} alt="Pic 6" />
                 </div>
-                <div>
+                <div className="image-container">
                     <img src={img7} alt="Pic 7" />
                 </div>
-                <div>
+                <div className="image-container">
                     <img src={img8} alt="Pic 8" />
                 </div>
-                <div>
+                <div className="image-container">
                     <img src={img9} alt="Pic 9" />
                 </div>
-                <div>
+                <div className="image-container">
                     <img src={img10} alt="Pic 10" />
                 </div>
-                <div>
+                <div className="image-container">
                     <img src={img11} alt="Pic 11" />
                 </div>
-                <div>
+                <div className="image-container">
                     <img src={img12} alt="Pic 12" />
                 </div>
-                <div>
+                <div className="image-container">
                     <img src={img13} alt="Pic 13" />
                 </div>
             </Carousel>

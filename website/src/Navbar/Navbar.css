@@ -41,13 +41,6 @@
     padding: 10px 20px;
     border-radius: 20px;
     border: 2px solid #2caa63;
-    color: #2caa63;
-}
-
-.navbar-item-contact {
-    padding: 10px 20px;
-    border-radius: 20px;
-    border: 2px solid #2caa63;
     color: black;
 }
 
@@ -139,4 +132,135 @@
     color:#2caa63;
     padding: 10px 20px;
     border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+        margin-left: 0;
+    }
+
+    .navbar-items {
+        position: absolute;
+        top: 60px; /* Adjust based on your navbar height */
+        left: 0;
+        right: 0;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+        padding: 1rem;
+        z-index: 1000; /* Add this line */
+    }
+
+    .navbar-item {
+        display: flex;
+        justify-content: center;
+    }
+
+    .dropdown-menu-camps, .dropdown-menu-tournaments {
+        left: 50%;
+        transform: translateX(-50%);
+        position: relative;
+        box-shadow: none;
+    }
+}
+
+.dropdown-menu-camps-mobile {
+    padding: 0;
+    margin-top: 0.5rem;
+    background: white;
+    box-shadow: none;
+}
+
+.dropdown-menu-camps-mobile a {
+    color: #2caa63;
+    text-decoration: none;
+    display: block;
+    padding: 15px 0;
+    margin-left: 10px;
+    margin-top: 25px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+        margin-left: 0;
+    }
+
+    .navbar-items-mobile {
+        position: absolute;
+        top: 60px; /* Adjust based on your navbar height */
+        left: 0;
+        right: 0;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+        padding: 1rem;
+        z-index: 1000; /* Add this line */
+    }
+
+    .navbar-item {
+        display: flex;
+        justify-content: center;
+        background-color: grey;
+    }
+
+    .dropdown-menu-camps-mobile {
+        padding: 0;
+        margin-top: 0.5rem;
+        background: white;
+        box-shadow: none;
+        position: relative; /* Add this line */
+    }
+
+    .dropdown-menu-camps-mobile a {
+        color: black;
+        text-decoration: none;
+        display: block;
+        padding: 10px 0;
+    }
+}
+
+/* Remove the hover color change on mobile */
+@media (max-width: 768px) {
+    .navbar-item:hover, .navbar-item-contact:hover {
+        background-color: transparent;
+        color: black;
+        opacity: 100%;
+    }
+
+    .navbar-item-contact:hover .navbar-fields-contact-a {
+        color: #2caa63;
+    }
+}
+
+.navbar-item-mobile {
+    padding: 10px 20px; 
+    transition: background-color 0.2s ease; 
+}
+
+.navbar-item-contact-mobile {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 2px solid #2caa63;
+    color: black;
+}
+
+.navbar-title-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dropdown-menu-camps-mobile {
+    padding: 0;
+    margin-top: 0.5rem;
+    background: white;
+    box-shadow: none;
+    position: relative; /* Changed from absolute to relative */
 }
