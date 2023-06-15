@@ -46,18 +46,6 @@
     margin-top: 2rem;
 }
 
-.sko-card {
-    border: 1px solid #ccc;
-    border-radius: 15px;
-    padding: 1rem;
-    width: 30%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-
 .sko-card-title {
     font-size: 1.35rem;
     font-weight: bold;
@@ -166,4 +154,185 @@
 
 .sko-card-body {
     flex-grow: 1;
+}
+
+/* Mobile Adjustments */
+
+.sko-header-mobile{
+    font-size: 1.95rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;  
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sko-offer-header-mobile{
+    font-size: 1.50rem;
+    font-weight: 900;
+    font-style: italic;
+    text-align: center;
+    margin-top: 1.75rem;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sko-subheader-mobile{
+    width: 80%;
+    font-size: 1.15rem;
+    font-weight: 100;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+}
+
+.image-container-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sko-image-mobile{
+    width: 80%;
+    border-radius: 10px;
+}
+
+.registration-container-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 4.5rem;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cost-mobile {
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 2px solid #2caa63;
+    padding: .5rem 1rem;
+    border-radius: 4px;
+    color: #2caa63;
+    text-align: center;
+}
+
+.register-button-mobile {
+    padding: .5rem 1rem;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #2caa63;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 2px solid #2caa63;
+}
+
+.vertical-line-mobile {
+    height: 60px;
+    border-left: 1px solid #2caa63;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.sko-card-container-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 15px;
+    padding: 2rem 1rem;
+    padding-bottom: 0rem;
+    border: 1px solid #2caa63;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sko-card-description-mobile {
+    list-style-type: none;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.sko-card-link-mobile{
+    color: #2caa63;
+    text-decoration: none;
+    border: 1px solid #2caa63;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.sko-card-mobile{
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 1rem; /* Add margin to create spacing between cards */
+    background-color: #f9f9f9; /* Add a background color */
+    box-shadow: 0px 4px 4px 0px rgba(44,170,99,0.25);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sko-attendees-card-mobile{
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 1rem;
+    width: 80%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 1rem; /* Add margin to create spacing between cards */
+    background-color: #f9f9f9; /* Add a background color */
+    box-shadow: 0px 4px 4px 0px rgba(44,170,99,0.25);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.waiver-row-mobile {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.sko-waiver-input-mobile{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+}
+
+.sko-past-attendees-card-container-mobile {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 2.5rem 0;
 }
