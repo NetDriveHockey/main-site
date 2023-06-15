@@ -162,3 +162,167 @@
 .radio-container{
     margin-left: 2rem;
 }
+
+/* Mobile Adjustments */
+
+.registration-form-container-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration-form-mobile {
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 75%;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+    margin-top: 1rem;
+    overflow-y: auto; /* Added this line */
+    max-height: 90vh; /* Added this line */
+}
+
+.close-button-mobile {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1.75em;
+    color: red;
+}
+
+.back-button-mobile {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1.75em;
+    color: #2caa63;
+}
+  
+.form-group-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 1rem;
+}
+
+.label-container-form-mobile,
+.input-container-form-mobile {
+    width: 100%;
+}
+  
+.submit-button-container-mobile {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.submit-button-mobile {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background: #2caa63;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-button-mobile:hover {
+    background: #248a56;
+}
+  
+.form-title-mobile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.r-radio-buttons-mobile {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.5rem;
+}
+
+.r-radio-buttons-mobile > div {
+    display: flex;
+    align-items: center;
+}
+
+.r-radio-buttons-mobile input[type="radio"] {
+    display: none;
+}
+
+
+.r-radio-buttons-mobile input[type="radio"] + label {
+    position: relative;
+    padding-left: 35px; 
+    cursor: pointer;
+    line-height: 24px;
+}
+
+.r-radio-buttons-mobile input[type="radio"] + label:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #2caa63;
+    border-radius: 50%;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.r-radio-buttons-mobile input[type="radio"] + label:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #2caa63;
+    display: none;
+    transition: all 0.3s ease;
+}
+
+
+.r-radio-buttons-mobile input[type="radio"]:checked + label:after {
+    display: block;
+}
+
+.form-group-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-label-mobile {
+    margin-bottom: 0.5rem;
+}
+
+.input-field-mobile {
+    flex-basis: 75%;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.radio-container-mobile {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
