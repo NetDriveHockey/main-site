@@ -191,7 +191,7 @@
 
     .navbar-items-mobile {
         position: absolute;
-        top: 60px; /* Adjust based on your navbar height */
+        top: 75px; /* Adjust based on your navbar height */
         left: 0;
         right: 0;
         background: white;
@@ -263,4 +263,22 @@
     background: white;
     box-shadow: none;
     position: relative; /* Changed from absolute to relative */
+}
+
+.menu-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.4rem;
+    background-color: white;
+    margin-left: 2rem;
+}
+
+.navbar-title-row-mobile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1rem;
 }

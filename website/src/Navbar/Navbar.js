@@ -21,18 +21,18 @@ export default function Navbar() {
     }, []);
   
     return isMobile ? <MobileNavbar /> : <DesktopNavbar />;
-  }
+}
 
 
 function MobileNavbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isOpenCamps, setIsOpenCamps] = useState(false);
-    const menuIcon = isMenuOpen ? <FaTimes /> : <FaBars />;
+    const menuIcon = isMenuOpen ? <FaTimes size={30} color='#2caa63'/> : <FaBars size={30} color='#2caa63'/>;
 
     return (
         <div className="navbar">
 
-            <div className="navbar-title-row">
+            <div className="navbar-title-row-mobile">
                 <div className="navbar-title">
                     <img className="navbar-title-logo" src={logo} alt="NetDriveHockey Logo"></img>NetDriveHockey
                 </div>
