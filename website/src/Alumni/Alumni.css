@@ -15,6 +15,7 @@
     margin-top: 2.5rem;
     margin-bottom: 2rem;  
 }
+
 .alumni-number-row {
     display: flex;
     justify-content: space-evenly;
@@ -78,4 +79,62 @@
 .alumni-card-footer {
     margin-top: 1rem;
     order: 3;
+}
+
+
+/* Mobile Adjustments */
+
+.alumni-header-mobile{
+    font-size: 1.95rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;  
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alumni-subheader-mobile{
+    font-size: 1.50rem;
+    font-weight: 900;
+    font-style: italic;
+    text-align: center;
+    margin-top: 1.75rem;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alumni-number-row-mobile {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem auto;
+    width: 90%;
+}
+
+.alumni-card-container-mobile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: auto;
+    max-width: 1200px; 
+}
+
+.alumni-card-mobile {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 120px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.alumni-card-image-mobile {
+    height: 8rem;
+    order: 2;
 }
