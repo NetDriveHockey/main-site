@@ -52,7 +52,7 @@ function DesktopAlumni() {
                 <h3 className="alumni-subheader">NetDrive Hockey is proud to have been involved the following players hockey journey</h3>
                 <div className="alumni-number-row">
                     <div className="alumni-number-card">
-                        <CountUp end={1} duration={3.5}>
+                        <CountUp end={1} duration={3.5} start={1}>
                             {({ countUpRef }) => (
                                 <div>
                                     <span className="alumni-number" ref={countUpRef} />
@@ -62,7 +62,7 @@ function DesktopAlumni() {
                         </CountUp>
                     </div>
                     <div className="alumni-number-card">
-                        <CountUp end={2} duration={3.5}>
+                        <CountUp end={2} duration={3.5} start={2}>
                             {({ countUpRef }) => (
                                 <div>
                                     <span className="alumni-number" ref={countUpRef} />
@@ -72,7 +72,7 @@ function DesktopAlumni() {
                         </CountUp>
                     </div>
                     <div className="alumni-number-card">
-                        <CountUp end={4} duration={3.5}>
+                        <CountUp end={4} duration={3.5} start={4}>
                             {({ countUpRef }) => (
                                 <div>
                                     <span className="alumni-number" ref={countUpRef} />
@@ -82,7 +82,7 @@ function DesktopAlumni() {
                         </CountUp>
                     </div>
                     <div className="alumni-number-card">
-                        <CountUp end={5} duration={3.5}>
+                        <CountUp end={5} duration={3.5} start={5}>
                             {({ countUpRef }) => (
                                 <div>
                                     <span className="alumni-number" ref={countUpRef} />
@@ -119,7 +119,7 @@ function MobileAlumni() {
                 <h3 className="alumni-subheader-mobile">NetDrive Hockey is proud to have been involved the following players hockey journey</h3>
                 <div className="alumni-number-row-mobile">
                     <div className="alumni-number-card">
-                        <CountUp end={1} duration={3.5}>
+                        <CountUp end={1} duration={3.5} start={1}>
                             {({ countUpRef }) => (
                                 <div>
                                     <span className="alumni-number" ref={countUpRef} />
@@ -129,7 +129,7 @@ function MobileAlumni() {
                         </CountUp>
                     </div>
                     <div className="alumni-number-card">
-                        <CountUp end={2} duration={3.5}>
+                        <CountUp end={2} duration={3.5} start={2}>
                             {({ countUpRef }) => (
                                 <div>
                                     <span className="alumni-number" ref={countUpRef} />
@@ -139,7 +139,7 @@ function MobileAlumni() {
                         </CountUp>
                     </div>
                     <div className="alumni-number-card">
-                        <CountUp end={4} duration={3.5}>
+                        <CountUp end={4} duration={3.5} start={4}>
                             {({ countUpRef }) => (
                                 <div>
                                     <span className="alumni-number" ref={countUpRef} />
@@ -149,7 +149,7 @@ function MobileAlumni() {
                         </CountUp>
                     </div>
                     <div className="alumni-number-card">
-                        <CountUp end={5} duration={3.5}>
+                        <CountUp end={5} duration={3.5} start={5}>
                             {({ countUpRef }) => (
                                 <div>
                                     <span className="alumni-number" ref={countUpRef} />
