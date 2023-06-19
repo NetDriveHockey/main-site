@@ -12,20 +12,28 @@ function FormManager({ onClose }) {
     const handleRegistrationSubmit = (data) => {
         // Handle registration submission here
         onClose(); // Close the form after successful registration
+        console.log(data);
 
-        fetch('http://localhost:3334/submit-form', {
+        fetch('https://us-central1-netdrive-218b0.cloudfunctions.net/app/camp-register', {
             method: 'POST',
             body: JSON.stringify({ data, sheetName: ageGroup }),
             headers: { 'Content-Type': 'application/json' },
         })
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
         .then(data => {
             if (data.success) {
                 alert("Registration was successful!");
             } else {
                 alert("There was a problem with the registration.");
             }
-        });
+        })
+        .catch(e => console.error('There was an error during the fetch operation: ', e));
+
     };
 
     const handleBack = () => {
