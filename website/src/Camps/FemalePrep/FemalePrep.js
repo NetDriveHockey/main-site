@@ -7,6 +7,8 @@ import './FemalePrep.css';
 
 import FemalePrepImg from '../female_prep_img.jpeg'
 
+import Toast from '../../Toast/Toast';
+
 
 export default function FemalePrep() {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 769);
@@ -34,6 +36,8 @@ export default function FemalePrep() {
 }
 
 function DesktopFemalePrep() {
+    const [toast, setToast] = useState({message: '', type: ''});
+
     return (
         <div className="FemalePrep">
             <div>
@@ -47,7 +51,7 @@ function DesktopFemalePrep() {
                 <div className="registration-container">
                     <div className="cost">Cost: $285.00</div>
                     <div className="vertical-line"></div>
-                    <button className="register-button" onClick={() => (null)}>Registration Opens Soon!</button>
+                    <button className="register-button" onClick={() => (setToast({message: 'Check back again soon', type: 'success'}))}>Registration Opens Soon!</button>
                 </div>
                 
                 <div className="female-prep-offer-container">
@@ -58,11 +62,14 @@ function DesktopFemalePrep() {
                     </div>
                 </div>  
             </div>
+            <Toast message={toast.message} type={toast.type} />
         </div>
     );
 }
 
 function MobileFemalePrep() {
+    const [toast, setToast] = useState({message: '', type: ''});
+
     return (
         <div className="FemalePrep">
             <div>
@@ -76,7 +83,7 @@ function MobileFemalePrep() {
                 <div className="registration-container-mobile">
                     <div className="cost-mobile">Cost: $285.00</div>
                     <div className="vertical-line-mobile"></div>
-                    <button className="register-button-mobile" onClick={() => (null)}>Register Soon!</button>
+                    <button className="register-button-mobile" onClick={() => (setToast({message: 'Check back again soon', type: 'success'}))}>Register Soon!</button>
                 </div>
                 
                 <div className="female-prep-offer-container">
@@ -87,6 +94,7 @@ function MobileFemalePrep() {
                     </div>
                 </div>  
             </div>
+            <Toast message={toast.message} type={toast.type} />
         </div>
     );
 }

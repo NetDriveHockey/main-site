@@ -46,6 +46,7 @@ export default function SpringKickOff() {
 }
 
 function DesktopSpringKickOff() {
+    const [toast, setToast] = useState({message: '', type: ''});
     return (
         <div>
             <div>
@@ -60,7 +61,7 @@ function DesktopSpringKickOff() {
                 <div className="registration-container">
                     <div className="cost">Cost: $1750/Team</div>
                     <div className="vertical-line"></div>
-                    <button className="register-button" onClick={() => (null)}>Register Now</button>
+                    <button className="register-button" onClick={() => (setToast({message: 'Check again soon', type: 'success'}))}>Register Now</button>
                 </div>
                 <div className="sko-offer-container">
                     <h3 className="sko-offer-header">Info</h3>
@@ -93,11 +94,13 @@ function DesktopSpringKickOff() {
                     </div>
                 </div>
             </div>
+            <Toast message={toast.message} type={toast.type} />
         </div>
     );
 }
 
 function MobileSpringKickOff() {
+    const [toast, setToast] = useState({message: '', type: ''});
     return (
         <div>
             <div>
@@ -112,7 +115,7 @@ function MobileSpringKickOff() {
                 <div className="registration-container-mobile">
                     <div className="cost-mobile">Cost: $1750/Team</div>
                     <div className="vertical-line-mobile"></div>
-                    <button className="register-button-mobile" onClick={() => (null)}>Register Now</button>
+                    <button className="register-button-mobile" onClick={() => (setToast({message: 'Check again soon', type: 'success'}))}>Register Now</button>
                 </div>
                 <div className="sko-offer-container">
                     <h3 className="sko-offer-header">Info</h3>
@@ -145,6 +148,7 @@ function MobileSpringKickOff() {
                     </div>
                 </div>
             </div>
+            <Toast message={toast.message} type={toast.type} />
         </div>
     );
 }

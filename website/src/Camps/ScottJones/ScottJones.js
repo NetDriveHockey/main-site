@@ -7,6 +7,8 @@ import './ScottJones.css';
 
 import ScottJonesImg from '../scott_jones_img.jpeg'
 
+import Toast from '../../Toast/Toast';
+
 export default function ScottJones() {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 769);
 
@@ -33,6 +35,8 @@ export default function ScottJones() {
 }
 
 function DesktopScottJones() {
+    const [toast, setToast] = useState({message: '', type: ''});
+
     return (
         <div>
             <div>
@@ -46,7 +50,7 @@ function DesktopScottJones() {
                 <div className="registration-container">
                     <div className="cost">Cost: TBD</div>
                     <div className="vertical-line"></div>
-                    <button className="register-button" onClick={() => (null)}>Registration TBD</button>
+                    <button className="register-button" onClick={() => (setToast({message: 'Check back again soon', type: 'success'}))}>Registration TBD</button>
                 </div>
                 
                 <div className="scott-jones-offer-container">
@@ -68,11 +72,14 @@ function DesktopScottJones() {
 
                 
             </div>
+            <Toast message={toast.message} type={toast.type} />
         </div>
     );
 }
 
 function MobileScottJones() {
+    const [toast, setToast] = useState({message: '', type: ''});
+
     return (
         <div>
             <div>
@@ -86,7 +93,7 @@ function MobileScottJones() {
                 <div className="registration-container-mobile">
                     <div className="cost-mobile">Cost: TBD</div>
                     <div className="vertical-line-mobile"></div>
-                    <button className="register-button-mobile" onClick={() => (null)}>Registration TBD</button>
+                    <button className="register-button-mobile" onClick={() => (setToast({message: 'Check back again soon', type: 'success'}))}>Registration TBD</button>
                 </div>
                 
                 <div className="scott-jones-offer-container">
@@ -108,6 +115,7 @@ function MobileScottJones() {
 
                 
             </div>
+            <Toast message={toast.message} type={toast.type} />
         </div>
     );
 }
