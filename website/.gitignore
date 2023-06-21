@@ -29,3 +29,4 @@ yarn-error.log*
 firebase.json
 *.cache
 firebaseConfig.json
+firebaseConfig.js

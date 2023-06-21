@@ -14,6 +14,9 @@ import springKickoffLogo from './spring-kickoff-img.jpeg';
 import tournamentTeam1 from './tournament-team1.jpeg';
 import tournamentTeam2 from './tournament-team2.jpeg';
 
+import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import { storage } from '../firebaseConfig';  // Assuming your configuration file is named firebaseConfig.js
+
 
 export default function SpringKickOff() {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 769);
@@ -44,7 +47,7 @@ function DesktopSpringKickOff() {
     return (
         <div>
             <div>
-                <h1 className="sko-header">Spring Kickoff Tournament</h1>
+                <h1 className="sko-header">Spring Kickoff Tournament test</h1>
                 <hr className="sko-line"></hr>
                 
                 <h3 className="sko-offer-header">2023 Spring Kick Off Tournament Information - Mar 31-April 2nd, 2023</h3>
@@ -203,6 +206,39 @@ function MobileAttendeesCard({ title, subheader, body }) {
 }
 
 function WaiverCard({ title, body, link }) {
+    const handleFileChange = async (e) => {
+        console.log('File input changed');
+        const file = e.target.files[0];
+
+        console.log(file);
+        console.log(file.name);
+
+        if (file) {
+            try {
+                console.log('Uploading file...');
+                const storageRef = ref(storage, file.name);
+                const uploadTask = uploadBytesResumable(storageRef, file);
+    
+                uploadTask.on('state_changed', 
+                    (snapshot) => {
+                        var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                        console.log('Upload is ' + progress + '% done');
+                    }, 
+                    (error) => {
+                        console.error('Upload failed:', error);
+                    }, 
+                    () => {
+                        getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+                            console.log('File available at', downloadURL);
+                        });
+                    }
+                );
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+    };
+
     return (
         <div className="sko-card">
             <h4 className="sko-card-title">{title}</h4>
@@ -210,7 +246,7 @@ function WaiverCard({ title, body, link }) {
             <div className='waiver-row'>
                 <a href={link} target="_blank" rel="noopener noreferrer" className="sko-card-link">Waiver</a>
                 <div className="sko-vertical-line"></div>
-                <input type="file" id="fileInput"></input>
+                <input type="file" id="fileInput" onChange={handleFileChange}></input>
             </div>
             
         </div>
@@ -218,6 +254,39 @@ function WaiverCard({ title, body, link }) {
 }
 
 function MobileWaiverCard({ title, body, link }) {
+    const handleFileChange = async (e) => {
+        console.log('File input changed');
+        const file = e.target.files[0];
+
+        console.log(file);
+        console.log(file.name);
+
+        if (file) {
+            try {
+                console.log('Uploading file...');
+                const storageRef = ref(storage, file.name);
+                const uploadTask = uploadBytesResumable(storageRef, file);
+    
+                uploadTask.on('state_changed', 
+                    (snapshot) => {
+                        var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                        console.log('Upload is ' + progress + '% done');
+                    }, 
+                    (error) => {
+                        console.error('Upload failed:', error);
+                    }, 
+                    () => {
+                        getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+                            console.log('File available at', downloadURL);
+                        });
+                    }
+                );
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+    };
+
     return (
         <div className="sko-card-mobile">
             <h4 className="sko-card-title">{title}</h4>
@@ -225,7 +294,7 @@ function MobileWaiverCard({ title, body, link }) {
             <div className='waiver-row-mobile'>
                 <a href={link} target="_blank" rel="noopener noreferrer" className="sko-card-link">Waiver</a>
                 <div className="sko-vertical-line"></div>
-                <input type="file" id="fileInput" className='sko-waiver-input-mobile'></input>
+                <input type="file" id="mobileFileInput" className='sko-waiver-input-mobile' onChange={handleFileChange}></input>
             </div>
             
         </div>
