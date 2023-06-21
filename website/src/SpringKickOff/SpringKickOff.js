@@ -221,6 +221,16 @@ function WaiverCard({ title, body, link }) {
         console.log(file);
         console.log(file.name);
 
+        if (!file.name.endsWith('.pdf')) {
+            setToast({message: 'File must be a PDF', type: 'error'});
+            return;
+        }
+
+        if (file.name.substring(0, file.name.lastIndexOf('.')) == 'SpringKick-off-2023-Waiver.docx-Google-D-67' || !file.name.includes('_'))  {
+            setToast({message: 'Rename file as: LastName_FirstName.pdf', type: 'error'});
+            return;
+        }
+
         if (file) {
             try {
                 console.log('Uploading file...');
@@ -269,13 +279,18 @@ function MobileWaiverCard({ title, body, link }) {
 
 
     const handleFileChange = async (e) => {
-        console.log('File input changed');
         const file = e.target.files[0];
 
-        console.log(file);
-        console.log(file.name);
-
         if (file) {
+            if (!file.name.endsWith('.pdf')) {
+                setToast({message: 'File must be a PDF', type: 'error'});
+                return;
+            }
+    
+            if (file.name.substring(0, file.name.lastIndexOf('.')) == 'SpringKick-off-2023-Waiver.docx-Google-D-67' || !file.name.includes('_'))  {
+                setToast({message: 'Rename file as: LastName_FirstName.pdf', type: 'error'});
+                return;
+            }
             try {
                 console.log('Uploading file...');
                 const storageRef = ref(storage, file.name);
