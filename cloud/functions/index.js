@@ -19,50 +19,59 @@ app.use(cors({
 }));
 
 app.post("/camp-register", async (req, res) => {
-    logger.log("Starting camp register");
-    let credentials = process.env.GOOGLE_SHEETS_CREDENTIALS;
-    if (typeof credentials === 'string') {
-        credentials = JSON.parse(credentials);
-    }
+  logger.log("Starting camp register");
 
-    const auth = new google.auth.GoogleAuth({
+  let credentials = process.env.GOOGLE_SHEETS_CREDENTIALS;
+  if (typeof credentials === 'string') {
+      credentials = JSON.parse(credentials);
+  }
+
+  const auth = new google.auth.GoogleAuth({
       credentials: credentials,
       scopes: "https://www.googleapis.com/auth/spreadsheets",
-      
-    });
-    const client = await auth.getClient();
-    const googleSheets = google.sheets({ version: "v4", auth: client });
+  });
+  const client = await auth.getClient();
+  const googleSheets = google.sheets({ version: "v4", auth: client });
 
-    const { data, sheetName } = req.body;
+  const { data, sheetName } = req.body;
 
-    logger.log(data);
-  
-    const ageGroupToSheetName = {
+  logger.log(data);
+
+  const ageGroupToSheetName = {
       "U11": "U11RepPrep",
       "U13": "U13RepPrep",
       "U15": "U15RepPrep",
       "U18": "U18RepPrep",
-    };
+  };
 
-    logger.log(sheetName);
-  
-    const newSheetName = ageGroupToSheetName[sheetName];
+  logger.log(sheetName);
 
-    logger.log(newSheetName);
-    try {
+  const newSheetName = ageGroupToSheetName[sheetName];
+
+  logger.log(newSheetName);
+
+  try {
       await googleSheets.spreadsheets.values.append({
-        auth,
-        spreadsheetId: "1FdnLQIpqjP5j4P57kgdjXSCYojrI32C_HuUUw6P5Fx8",
-        range: `${newSheetName}!A:A`,
-        valueInputOption: "USER_ENTERED",
-        resource: {
-          values: [Object.values(data)],
-        },
+          auth,
+          spreadsheetId: "1FdnLQIpqjP5j4P57kgdjXSCYojrI32C_HuUUw6P5Fx8",
+          range: `${newSheetName}!A:A`,
+          valueInputOption: "USER_ENTERED",
+          resource: {
+              values: [Object.values(data)],
+          },
       });
-    } catch (err) {
+
+      // Send a successful response if the operation completes successfully.
+      res.json({ success: true, message: "Data appended successfully" });
+
+  } catch (err) {
       logger.log(err);
-    }
+
+      // Send an error response if there's an error.
+      res.status(500).json({ success: false, message: "There was an error appending the data" });
+  }
 });
+
 
 exports.onFileUpload = functions.storage.object().onFinalize(async (object) => {
   const filePath = object.name;

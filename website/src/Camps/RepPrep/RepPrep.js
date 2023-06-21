@@ -10,8 +10,20 @@ import './RepPrep.css';
 import FormManager from './FormManager/FormManager';
 
 
+import Toast from '../../Toast/Toast';
+
+
 export default function RepPrep() {
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 769);
+    const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' && window.innerWidth < 769);
+
+    const [toast, setToast] = useState({message: '', type: ''});
+
+    function handleSubmitResult(success, message) {
+        setToast({
+            message,
+            type: success ? 'success' : 'error'
+        });
+    }
 
     const checkScreenSize = () => {
         setIsMobile(window.innerWidth < 769);
@@ -29,18 +41,19 @@ export default function RepPrep() {
     return (
         <div>
             <Navbar />
-            {isMobile ? <MobileRepPrep /> : <DesktopRepPrep />}
+            {isMobile ? <MobileRepPrep onSubmitResult={handleSubmitResult} /> : <DesktopRepPrep onSubmitResult={handleSubmitResult} />}
+            <Toast message={toast.message} type={toast.type} />
             <Footer />
         </div>
     );
 }
 
-function DesktopRepPrep() {
+function DesktopRepPrep({onSubmitResult}) {
     const [showForm, setShowForm] = useState(false);
 
     return (
         <div className="RepPrep">
-            {showForm && <FormManager onClose={() => setShowForm(false)}/>}
+            {showForm && <FormManager onClose={() => setShowForm(false)} onSubmitResult={onSubmitResult}/>}
 
             <div>
                 <h1 className="rep-prep-header">Pre Season Rep-Prep Chilliwack</h1>
@@ -76,12 +89,12 @@ function DesktopRepPrep() {
     );
 }
 
-function MobileRepPrep() {
+function MobileRepPrep({onSubmitResult}) {
     const [showForm, setShowForm] = useState(false);
 
     return (
         <div className="RepPrep">
-            {showForm && <FormManager onClose={() => setShowForm(false)}/>}
+            {showForm && <FormManager onClose={() => setShowForm(false)} onSubmitResult={onSubmitResult}/>}
 
             <div>
                 <h1 className="rep-prep-header-mobile">Pre Season Rep-Prep Chilliwack</h1>

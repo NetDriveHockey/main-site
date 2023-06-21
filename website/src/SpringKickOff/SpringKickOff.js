@@ -15,7 +15,9 @@ import tournamentTeam1 from './tournament-team1.jpeg';
 import tournamentTeam2 from './tournament-team2.jpeg';
 
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import { storage } from '../firebaseConfig';  // Assuming your configuration file is named firebaseConfig.js
+import { storage } from '../firebaseConfig';  
+
+import Toast from '../Toast/Toast';
 
 
 export default function SpringKickOff() {
@@ -206,6 +208,8 @@ function MobileAttendeesCard({ title, subheader, body }) {
 }
 
 function WaiverCard({ title, body, link }) {
+    const [toast, setToast] = useState({message: '', type: ''});
+
     const handleFileChange = async (e) => {
         console.log('File input changed');
         const file = e.target.files[0];
@@ -226,15 +230,18 @@ function WaiverCard({ title, body, link }) {
                     }, 
                     (error) => {
                         console.error('Upload failed:', error);
+                        setToast({message: 'Upload failed, try again or contact us', type: 'error'});
                     }, 
                     () => {
                         getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
                             console.log('File available at', downloadURL);
+                            setToast({message: 'Upload successful', type: 'success'});
                         });
                     }
                 );
             } catch (error) {
                 console.error('Error:', error);
+                setToast({message: 'Error occurred', type: 'error'});
             }
         }
     };
@@ -246,14 +253,17 @@ function WaiverCard({ title, body, link }) {
             <div className='waiver-row'>
                 <a href={link} target="_blank" rel="noopener noreferrer" className="sko-card-link">Waiver</a>
                 <div className="sko-vertical-line"></div>
-                <input type="file" id="fileInput" onChange={handleFileChange}></input>
+                <input type="file" id="fileInput" className="sko-file-upload" onChange={handleFileChange}></input>
             </div>
-            
+            <Toast message={toast.message} type={toast.type} />
         </div>
     );
 }
 
 function MobileWaiverCard({ title, body, link }) {
+    const [toast, setToast] = useState({message: '', type: ''});
+
+
     const handleFileChange = async (e) => {
         console.log('File input changed');
         const file = e.target.files[0];
@@ -274,15 +284,18 @@ function MobileWaiverCard({ title, body, link }) {
                     }, 
                     (error) => {
                         console.error('Upload failed:', error);
+                        setToast({message: 'Upload failed, try again or contact us', type: 'error'});
                     }, 
                     () => {
                         getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
                             console.log('File available at', downloadURL);
+                            setToast({message: 'Upload successful', type: 'success'});
                         });
                     }
                 );
             } catch (error) {
                 console.error('Error:', error);
+                setToast({message: 'Error occurred', type: 'error'});
             }
         }
     };
