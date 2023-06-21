@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import AgeGroupForm from './AgeGroupForm/AgeGroupForm';
 import RegistrationForm from './RegistrationForm/RegistrationForm';
 
-function FormManager({ onClose }) {
+function FormManager({ onClose, onSubmitResult }) {
     const [ageGroup, setAgeGroup] = useState(null);
 
     const handleAgeGroupSubmit = (value) => {
@@ -11,7 +11,7 @@ function FormManager({ onClose }) {
 
     const handleRegistrationSubmit = (data) => {
         // Handle registration submission here
-        onClose(); // Close the form after successful registration
+        
         console.log(data);
 
         fetch('https://us-central1-netdrive-218b0.cloudfunctions.net/app/camp-register', {
@@ -23,16 +23,24 @@ function FormManager({ onClose }) {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
+            console.log('Registration was successful');
             return response.json();
         })
         .then(data => {
             if (data.success) {
-                alert("Registration was successful!");
+                console.log('Registration was successful');
+                onSubmitResult(true, 'Registration was successful');
+                onClose();
             } else {
-                alert("There was a problem with the registration.");
+                onSubmitResult(false, 'There was a problem with the registration');
+                onClose();
             }
         })
-        .catch(e => console.error('There was an error during the fetch operation: ', e));
+        .catch(e => {
+            console.error('There was an error during the fetch operation: ', e);
+            onSubmitResult(false, 'There was an error during the fetch operation');
+            onClose();
+        });
 
     };
 
