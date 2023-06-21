@@ -73,7 +73,6 @@ exports.onFileUpload = functions.storage.object().onFinalize(async (object) => {
   try {
       let destFilename = '/tmp/downloadedFile';
       const options = {
-          // The path to which the file should be downloaded
           destination: destFilename,
       };
 
@@ -105,6 +104,10 @@ exports.onFileUpload = functions.storage.object().onFinalize(async (object) => {
       });
 
       console.log(response.data);
+
+      await storage.bucket(bucketName).file(filePath).delete(); // Deleted the file after upload to Drive
+
+      console.log(`File ${filePath} deleted.`);
   }
   catch (error) {
       console.error('Error:', error);
