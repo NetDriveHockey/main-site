@@ -19,8 +19,12 @@ export default function Footer() {
             
                 <p>© 2023 NetDriveHockey</p>
                 <div className="footer-links">
-                    <FaInstagram className='faInstagram'/>
-                    <FaTwitter className='faTwitter'/>
+                    <a href="https://instagram.com/netdrivehockey.ca?igshid=MWQ1ZGUxMzBkMA==" target="_blank" rel="noreferrer">
+                        <FaInstagram className='faInstagram'/>
+                    </a>
+                    <a href="https://twitter.com/netdrivehockey1" target="_blank" rel="noreferrer">
+                        <FaTwitter className='faTwitter'/>
+                    </a>
                 </div>
                 
             </div>
