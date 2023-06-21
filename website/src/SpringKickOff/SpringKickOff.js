@@ -52,7 +52,7 @@ function DesktopSpringKickOff() {
                 
                 <h3 className="sko-offer-header">2023 Spring Kick Off Tournament Information - Mar 31-April 2nd, 2023</h3>
                 <h6 className="sko-subheader">The Spring Kick Off Tournament is hosted by Netdrivehockey.ca and the Chilliwack Jr. Chiefs each spring in beautiful Chilliwack BC. The 12th Spring Kick Off Tournament will be March 31-April 2nd, 2023. This is for AA/A teams in the 2011, 2012, 2013, 2014, 2015, 2016 divisions (AAA teams can play up an age group). Every age group will be guaranteed 4 games. Game slots will be 75min. Please email for more information or call Clarke Wismer 604-217-6116. Each year we host approximately 45 teams. We look forward to hosting you again in Chilliwack.</h6>
-                <div className="image-container">
+                <div className="image-container-sko">
                     <img src={springKickoffLogo} alt="rep-prep" className="rep-prep-image"></img>
                 </div>
                 <div className="registration-container">

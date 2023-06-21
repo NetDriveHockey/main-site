@@ -41,7 +41,7 @@ function DesktopFemalePrep() {
                 <hr className="female-prep-line"></hr>
                 <h1 className="female-prep-date">Aug/Sept 2023  -  Check back for registration info in Spring 2023</h1>
                 <h6 className="female-prep-subheader">Players will have fun, development and refine their skating, puck and checking skills over the 5 day camp. Goalies have professional goalie coach for 2 sessions. In addition, players will partake in valuable scrimmage like situations. All participants have to be experienced hockey players. This camp accomodates C players through to Rep and U18 AAA Female players.</h6>
-                <div className="image-container">
+                <div className="image-container-female-prep">
                     <img src={FemalePrepImg} alt="female-prep" className="female-prep-image"></img>
                 </div>
                 <div className="registration-container">
